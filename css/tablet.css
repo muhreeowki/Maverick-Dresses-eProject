@@ -1,0 +1,12 @@
+label.logo {
+    padding-left: 2rem;
+}
+
+nav ul li a {
+    font-size: .9rem;
+}
+
+.hero-text {
+    margin-left: 3rem;
+    width: 50%;
+}

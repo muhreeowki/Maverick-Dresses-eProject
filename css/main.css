@@ -1,0 +1,242 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Declare some variables for things I will use frequently. */
+:root {
+    --font-primary: 'Chivo', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+    --blue: #22A39F;
+    --dark-grey: #222222;
+    --grey: #434242;
+    --white: #F3EFE0;
+}
+
+/* Set defualt settings for all ellements. */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+/* Style main body of the webpage. */
+body {
+    font-family: var(--font-primary);
+    min-width: 480px;
+    height: 100vh;
+}
+/* ----------------HERO SECTION---------------- */
+/* Background image of the hero section. */
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+    background-image: url("../images/background.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* NAVBAR */
+
+nav {
+    height: 4.5rem;
+    width: 100%;
+}
+/* Style the Mavericks Logo on the nav. */
+label.logo{
+    padding-left: 3rem;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    font-weight: 500;
+    font-family: var(--font-secondary);
+
+}
+
+
+/* Make the nav list stay on the right of the nav */
+nav ul{
+    float: right;
+    margin-right: 2rem;
+}
+
+/* Makes the items horizontally inline */
+/* Add space between the nav items */
+nav ul li {
+    line-height: 4rem; 
+    display: inline-block;
+    margin: 0 7px; 
+}
+/* Style the individual links. */
+nav ul li a {
+    color: var(--dark-grey);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 7px 12px;
+    border-radius: 7px;
+    text-transform: uppercase;
+}
+/* Style the exit icon for the nav bar */
+.xicon {
+    width: 100%;
+    margin: 0;
+}
+
+/* Dynamic styles for the links */
+nav a:hover {
+    border: 1px solid var(--dark-grey);
+    color: #201a17; 
+    transition: all .3s;
+}
+/* style for active page on nav. */
+nav a.active {
+    background-color: var(--grey);
+    color: var(--white);
+}
+/* Style the hamburger icon */
+.checkbtn, .checkbtn2{
+    font-size: 2rem;
+    float: right;
+    line-height: 4rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    display: none;
+}
+/* Style the hamburger icon */
+.checkbtn {
+    color: var(--dark-grey);
+}
+/* Style the exit icon. */
+.checkbtn2 {
+    font-size: 2.2rem;
+    position: absolute;
+    left: 92%;
+    display: none;
+    color: var(--white);
+}
+#check, #check2{
+    display: none;
+}
+
+
+/* HERO TEXT AND IMAGE */
+/* Hero container box. */
+.hero-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding:0.5rem 2rem;
+}
+/* Hero text div style */
+.hero-text {
+    margin-top: 7rem;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    float: left;
+}
+/* Style the heading of the hero */
+h1.hero-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font-secondary);
+    color: var(--dark-grey);
+    letter-spacing: 2px;
+    margin: 2rem 0;
+}
+/* Style the hero paragraph text */
+p.hero-desc {
+    color: var(--grey);
+    text-align: justify;
+}
+/* Style the hero call to action button. */
+a.cta {
+    width: 220px;
+    margin-top: 2.5rem;
+    color: var(--white);
+    padding: .5rem 2.5rem;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    background-color: var(--blue);
+    border-radius: 7px;
+    justify-content: flex-end;
+}
+
+/* TABLET CSS*/
+@media (max-width: 950px) {
+   label.logo {
+    padding-left: 2rem;
+   }
+
+   nav ul li a {
+    font-size: .9rem;
+   }
+
+   .hero-text {
+    margin-left: 3rem;
+    width: 50%;
+   }
+}
+
+/* MOBILE CSS */
+@media (max-width:858px) {
+
+    .checkbtn, .checkbtn2{
+        display: block;
+    }
+
+    #hero {
+        background-image: none;
+        background-color: var(--white);
+    }
+
+    nav ul {
+        position: fixed;
+        height: 40vh;
+        width: 100%;
+        background-color: #181818;
+        text-align: center;
+        top: -100%;
+        transition: all .3s; 
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a{
+        color: var(--white);
+    }
+
+    #check:checked ~ ul{
+        top: 0;
+        transition: all .3s; 
+    }
+    #check:checked ~ .checkbtn {
+        visibility: hidden;
+    }
+
+    #check2:checked ~ ul {
+        top: -100%;
+    }
+
+    .hero-text {
+        margin: 0;
+        padding-top: 20%; 
+        padding-right: 10%;
+        width: 89%;
+    }
+
+    h1.hero-heading {
+        margin-top: 0;
+    }
+}
