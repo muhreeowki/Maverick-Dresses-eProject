@@ -1,6 +1,8 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+
+/* --------------------BASE STYLES-------------------- */
 /* Declare some variables for things I will use frequently. */
 :root {
     --font-primary: 'Chivo', sans-serif;
@@ -10,7 +12,6 @@
     --grey: #434242;
     --white: #F3EFE0;
 }
-
 /* Set defualt settings for all ellements. */
 *{
     padding: 0;
@@ -23,9 +24,93 @@
 body {
     font-family: var(--font-primary);
     min-width: 480px;
-    height: 100vh;
+    background-color: var(--grey);
 }
-/* ----------------HERO SECTION---------------- */
+
+.container-medium {
+    padding: 0 5rem;
+    padding-top: 2rem;
+}
+
+
+
+/*--------------------NAVBAR-------------------- */
+nav {
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    background-color: var(--grey);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+/* Style the Mavericks Logo on the nav. */
+label.logo{
+    padding-left: 3rem;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    font-weight: 500;
+    font-family: var(--font-secondary);
+
+}
+/* Make the nav list stay on the right of the nav */
+nav ul{
+    float: right;
+    margin-right: 2rem;
+}
+/* Makes the items horizontally inline */
+/* Add space between the nav items */
+nav ul li {
+    line-height: 4rem; 
+    display: inline-block;
+    margin: 0 7px; 
+}
+/* Style the individual links. */
+nav ul li a {
+    color: var(--white);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 7px 12px;
+    border-radius: 7px;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+/* Dynamic styles for the links */
+nav a:hover {
+    color: #201a17; 
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+/* Style the exit icon for the nav bar */
+.xicon {
+    width: 100%;
+    margin: 0;
+}
+/* Style the hamburger icon */
+.checkbtn, .checkbtn2{
+    font-size: 2rem;
+    float: right;
+    line-height: 4rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    visibility: hidden;
+    color: var(--white);
+}
+/* Style the exit icon. */
+.checkbtn2 {
+    font-size: 2.2rem;
+    position: absolute;
+    left: 92%;
+    visibility: hidden;
+    color: var(--white);
+}
+#check, #check2{
+    display: none;
+}
+
+/* --------------------HERO SECTION-------------------- */
 /* Background image of the hero section. */
 #hero {
     width: 100%;
@@ -37,93 +122,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
-
-/* NAVBAR */
-
-nav {
-    height: 4.5rem;
-    width: 100%;
-}
-/* Style the Mavericks Logo on the nav. */
-label.logo{
-    padding-left: 3rem;
-    text-transform: uppercase;
-    color: var(--dark-grey);
-    letter-spacing: 1px;
-    font-size: 1.5rem;
-    line-height: 4rem;
-    font-weight: 500;
-    font-family: var(--font-secondary);
-
-}
-
-
-/* Make the nav list stay on the right of the nav */
-nav ul{
-    float: right;
-    margin-right: 2rem;
-}
-
-/* Makes the items horizontally inline */
-/* Add space between the nav items */
-nav ul li {
-    line-height: 4rem; 
-    display: inline-block;
-    margin: 0 7px; 
-}
-/* Style the individual links. */
-nav ul li a {
-    color: var(--dark-grey);
-    letter-spacing: 2px;
-    font-size: 1rem;
-    font-weight: 300;
-    padding: 7px 12px;
-    border-radius: 7px;
-    text-transform: uppercase;
-}
-/* Style the exit icon for the nav bar */
-.xicon {
-    width: 100%;
-    margin: 0;
-}
-
-/* Dynamic styles for the links */
-nav a:hover {
-    border: 1px solid var(--dark-grey);
-    color: #201a17; 
-    transition: all .3s;
-}
-/* style for active page on nav. */
-nav a.active {
-    background-color: var(--grey);
-    color: var(--white);
-}
-/* Style the hamburger icon */
-.checkbtn, .checkbtn2{
-    font-size: 2rem;
-    float: right;
-    line-height: 4rem;
-    margin-right: 2rem;
-    cursor: pointer;
-    display: none;
-}
-/* Style the hamburger icon */
-.checkbtn {
-    color: var(--dark-grey);
-}
-/* Style the exit icon. */
-.checkbtn2 {
-    font-size: 2.2rem;
-    position: absolute;
-    left: 92%;
-    display: none;
-    color: var(--white);
-}
-#check, #check2{
-    display: none;
-}
-
-
 /* HERO TEXT AND IMAGE */
 /* Hero container box. */
 .hero-box {
@@ -144,7 +142,7 @@ nav a.active {
     float: left;
 }
 /* Style the heading of the hero */
-h1.hero-heading {
+.heading {
     font-size: 3rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -153,6 +151,7 @@ h1.hero-heading {
     letter-spacing: 2px;
     margin: 2rem 0;
 }
+
 /* Style the hero paragraph text */
 p.hero-desc {
     color: var(--grey);
@@ -171,34 +170,167 @@ a.cta {
     justify-content: flex-end;
 }
 
+
+/* --------------------CATALOGUE SECTION MOBILE-------------------- */
+#catalog {
+    background-color: whitesmoke;
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+h3.heading {
+    font-size: 2rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    color: var(--dark-grey);
+}
+
+.subheading {
+    color: #63615a98;
+    padding-bottom: 2rem;
+}
+
+#catalog .catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+
+#catalog .catalog-item {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgba(77, 77, 77, 0.108);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0);
+    margin: 20px 0;
+    transition: .3s ease-in-out;
+    background-color:whitesmoke;
+}
+
+#catalog .catalog-item:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#catalog .catalog-item img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#catalog .item-description {
+    color: var(--dark-grey);
+    text-align: start;
+    padding: 10px 0;
+}
+
+#catalog .item-description span {
+   color: #43424290;
+   font-size: .9rem; 
+}
+
+#catalog .item-description h5 {
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    padding-top: 7px;
+}
+
+#catalog .item-description i {
+    font-size: .9rem;
+    color: orange;
+    padding-top: 7px;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    justify-items: space-between;
+    padding-right: 1rem;
+    width: 45%;
+}
+
+#contact .logo{
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+}
+
+#contact p, #contact a{
+    color: #cdcdcd;
+    padding-bottom: 6px;
+}
+
+#contact h4 {
+    font-weight: 200;
+    font-size: 1.3rem;
+    padding:10px 0;
+    color: var(--white);
+}
+
+#contact strong {
+    font-weight: 200;
+    color: var(--white);
+}
+
+#contact i {
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.1rem;
+    padding-right: .6rem;
+}
+
+#contact i:hover {
+    color: var(--dark-grey);
+}
+
+.map {
+    width: 55%;
+}
+
 /* TABLET CSS*/
 @media (max-width: 950px) {
-   label.logo {
-    padding-left: 2rem;
-   }
 
-   nav ul li a {
-    font-size: .9rem;
-   }
-
-   .hero-text {
-    margin-left: 3rem;
-    width: 50%;
-   }
+    /* --------------------NAVBAR TABLET-------------------- */
+    /* Change the size of the logo. */
+    label.logo {
+        padding-left: 2rem;
+    }
+    /* Reduce the font size of the nav links */
+    nav ul li a {
+        font-size: .9rem;
+    }
+    
+    /* --------------------HERO SECTION TABLET-------------------- */
+    /* Adjust the space taken up by the hero text. */
+    .hero-text {
+        margin-left: 3rem;
+        width: 50%;
+    }
 }
+
 
 /* MOBILE CSS */
 @media (max-width:858px) {
 
+    /* --------------------NAVBAR MOBILE-------------------- */
+    /* Show the hamburger Icon. */
     .checkbtn, .checkbtn2{
-        display: block;
+        visibility: visible;
     }
-
-    #hero {
-        background-image: none;
-        background-color: var(--white);
-    }
-
+    /* Change the layout of the nav list*/
     nav ul {
         position: fixed;
         height: 40vh;
@@ -206,37 +338,49 @@ a.cta {
         background-color: #181818;
         text-align: center;
         top: -100%;
-        transition: all .3s; 
+        transition: all .3s ease-in-out; 
     }
-
+    /* Make the nav list items display vertically. */
     nav ul li {
         display: block;
     }
-
+    /* Bring the top of the list lower. */
+    nav ul li.home {
+        margin-top: 2rem;
+    }
+    /* Change nav link color */
     nav ul li a{
         color: var(--white);
     }
 
+    /* Make the nav list move down when hamburger is clicked. */
     #check:checked ~ ul{
         top: 0;
-        transition: all .3s; 
     }
-    #check:checked ~ .checkbtn {
-        visibility: hidden;
-    }
-
+    /* Move nav list up when the X icon is clicked. */
     #check2:checked ~ ul {
         top: -100%;
     }
-
+    /* --------------------HERO SECTION MOBILE-------------------- */
+    /* Remove the background image from the hero. */
+    #hero {
+        background-image: none;
+        background-color: var(--white);
+    }
+    /* Style the hero text div. */
     .hero-text {
         margin: 0;
         padding-top: 20%; 
         padding-right: 10%;
         width: 89%;
     }
-
+    /* Adjust the hero heading. */
     h1.hero-heading {
         margin-top: 0;
     }
+
+    #contact .container-medium{
+        padding-left: 0;
+    }
+
 }

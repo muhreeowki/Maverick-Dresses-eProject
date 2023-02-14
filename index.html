@@ -14,59 +14,233 @@
   </head>
 
   <body>
-    <section id="hero">
+    <header id="hero" class="container">
       <!-- NAVIGATION BAR -->
         <nav> 
-            
             <!-- Logo -->
             <label class="logo">Maverick Dresses</label>   
-    
             <!-- Hamburger icon -->
             <input type="radio" value="on" id="check" name="ham">
             <label for="check" class="checkbtn">
               <i class="fa-solid fa-bars-staggered"></i>
             </label>
-
-            
-            
             <!-- Link list -->
             <ul class="nav-list">
-              
               <div class="xicon">
                 <input type="radio" value="off" id="check2" name="ham">
                 <label for="check2" class="checkbtn2">
                   <i class="fa-solid fa-xmark"></i>
                 </label>
               </div>
-              <li class="nav-item"><a href="" class="active">Home</a></li>
-              <li class="nav-item"><a href="">Catalogue</a></li>
-              <li class="nav-item"><a href="">About</a></li>
-              <li class="nav-item"><a href="">Contact</a></li>
+              <li class="nav-item home"><a href="#hero" class="active">Home</a></li>
+              <li class="nav-item"><a href="#catalog">catalog</a></li>
+              <!-- <li class="nav-item"><a href="">About</a></li> -->
+              <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
           </nav>
+      <!-- HERO ITEMS -->
+          <!-- Hero text container. -->
         <div class="hero-box">
           <div class="hero-text">
-          <h1 class="hero-heading">Premium & Affordable School Uniforms</h1>
+          <h1 class="heading">Premium & Affordable School Uniforms</h1>
           <!-- Subheading -->
           <p class="hero-desc">
             Maverick Dresses is the leading Uniform Manufacturer in the country. We provide premium and affordable school uniforms for girls and boys.  Our designs are innovative and we always have fresh and new ideas for each and every client. As a team of professionals We understand what You want and deliver the best results. 
           </p>
-          <a href="" class="cta">
-            VIEW CATALOGUE
+          <!-- Call to action button. -->
+          <a href="#catalog" class="cta">
+            VIEW CATALOG
           </a>
+          </div>
+        </div>
+    </header>
+    <!-- CATALOG SECTION -->
+    <section id="catalog" class="container">
+      <div class="container-medium">
+        <!-- Heading -->
+        <h3 class="heading">Featured Products</h3>
+        <p class="subheading">Uniforms in the Maverick Uniform Collection</p>
+        <!-- Catalog Container -->
+        <div class="catalog-container">
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/shirt.jpeg">
+            <div class="item-description">
+              <span>Formal Clothing</span>
+              <h5>Shirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/frock.jpeg">
+            <div class="item-description">
+              <span>Formal Clothing</span>
+              <h5>Frocks</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/skirt.jpeg">
+            <div class="item-description">
+              <span>Formal Clothing</span>
+              <h5>Skirts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/t-shirt.jpeg">
+            <div class="item-description">
+              <span>Sports</span>
+              <h5>T-shirt</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/shorts.jpeg">
+            <div class="item-description">
+              <span>Sports</span>
+              <h5>Shorts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/track-pants.jpeg">
+            <div class="item-description">
+              <span>Sports</span>
+              <h5>Track Pants</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/tie.jpeg">
+            <div class="item-description">
+              <span>Accessories</span>
+              <h5>Ties</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/belt.jpeg">
+            <div class="item-description">
+              <span>Accessories</span>
+              <h5>Belts</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/socks.jpeg">
+            <div class="item-description">
+              <span>Accessories</span>
+              <h5>Socks</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Single Catalog Item -->
+          <div class="catalog-item">
+            <img src="images/products/logos.jpeg">
+            <div class="item-description">
+              <span>Miscellaneous</span>
+              <h5>Logos</h5>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
           </div>
 
         </div>
+
+      </div>
+
     </section>
     
-    <section class=""></section>
+    <footer>
+      <div id="contact" class="container-medium">
+        <label class="logo">Maverick Dress</label>
+        <h4>Contact</h4>
+        <p><a href="mailto:info@maverickdresses.com"><strong>Email: </strong> info@maverickdresses.com</a></p>
+        <p><strong>Phone:</strong> +0 12304321</p>
+        <p><strong>Address:</strong> PO BOX 1234 Rainbow City, Wonderland</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113630.98428351956!2d-109.40902673879334!3d-27.12580970719033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9947f017a8d4ae2b%3A0xbbe5b3edc02a2db6!2sEaster%20Island!5e0!3m2!1sen!2ske!4v1676398378209!5m2!1sen!2ske" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 
-   <main>
-    <!-- HERO SECTION -->
-    
-   </main> 
+    </footer>
 
-    
-    <div class="container"></div>
   </body>
 </html>
