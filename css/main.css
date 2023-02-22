@@ -28,7 +28,7 @@ html {
 /* Style main body of the webpage. */
 body {
     font-family: var(--font-primary);
-    min-width: 480px;
+    min-width: 350px;
     background-color: white ;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,7 @@ body {
 /* Style the container */
 .container-medium {
     width: 100%;
+    min-width: 350px;
     max-width: 1920px;
     padding: 2rem 5%;
     padding-bottom: 0;
@@ -168,7 +169,7 @@ nav ul li a:hover {
 }
 /* Style the heading of the hero */
 .heading {
-    font-size: 6vh;
+    font-size: 6vmin;
     font-weight: 700;
     text-transform: uppercase;
     font-family: var(--font-secondary);
@@ -292,13 +293,14 @@ h3.heading {
     align-items: center;
     justify-content: center;
     padding-top: 2rem;
+    min-height: 530px;
 }
 /* Style the about us container */
 #about-section .container-medium {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 100%;
+    padding-bottom: 2rem;
 }
 /* Style the headings */
 #about-section .heading {
@@ -307,7 +309,7 @@ h3.heading {
 /* About us div */
 #about {
     width: 48%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -315,13 +317,9 @@ h3.heading {
     padding-right: 2rem;
     text-align: justify;
 }
-/* Style the about us paragraph */
-.about-desc {
-   max-height: 340;
-}
 /* Style the about us text */
 .about-desc p{
-    font-size: 16px;
+    font-size: 1.02rem;
     font-weight: 400;
     margin-bottom: 22px;
     line-height: 1.3rem;
@@ -360,6 +358,7 @@ input::placeholder, textarea::placeholder {
 /* About section button */
 #about-section .cta {
     margin-top: 0;
+    margin-bottom: 2rem;
     color: var(--dark-grey);
     border: 1px solid var(--grey);
 }
@@ -368,7 +367,6 @@ input::placeholder, textarea::placeholder {
     color: var(--white);
     background-color: #22222286;
 }
-
 /* contact-form and about */
 #about, #contact-form {
     justify-content: center;
@@ -396,13 +394,6 @@ input::placeholder, textarea::placeholder {
     padding:1rem 4rem;
     padding-left: 0;
     width: 45%;
-}
-/* Style the logo in the contact container. */
-#contact .logo{
-    color: var(--white);
-    padding: 0;
-    margin: 0;
-    font-size: 1.3rem;
 }
 /* Style the paragraph and anchor tags. */
 #contact p, #contact a{
@@ -457,12 +448,13 @@ iframe {
 
 
 /* ---------------------------------------*BREAKPOINTS*--------------------------------------- */
-/* BREAKPOINT FOR CONTACT SECTION*/
 /* larger displays */
 @media (max-width: 1205px) {
     /* -------------------- CONTACT SECTION-------------------- */
     #about-section {
         height: max-content;
+        margin-top: 20px;
+        padding: 0;
     }
     /* Adjust the alignment of the section container */
     #about-section .container-medium {
@@ -479,22 +471,26 @@ iframe {
     /* Add boder */
     #about {
         padding: 4rem 0;
-        border-bottom: 20px solid var(--grey);
+        border-bottom: 20px solid var(--dark-grey);
     }
     /* About text div */
     .about-desc {
         width: 85%;
         max-width: 950px;
+        max-height: none;
     }
-    /* Adjust form */
+    /* Adjust text font ssize */
+    .about-desc p {
+        font-size: .9rem;
+    }
+    /* Adjust User Contact form */
     form {
         width: 85%;
     }
 }
 
 /* TABLET BREAKPOINT */
-@media (max-width: 950px) {
-    /* --------------------NAVBAR-------------------- */
+@media (max-width: 924px) {
     /* Change the size of the logo. */
     label.logo {
         padding-left: 2rem;
@@ -503,7 +499,10 @@ iframe {
     nav ul li a {
         font-size: .9rem;
     }
-    /* --------------------HERO SECTION-------------------- */
+    /* Adjust catalog item size */
+    #catalog .catalog-item {
+        min-width: 220px;
+    }
     /* Adjust the space taken up by the hero text. */
     .hero-text {
         margin-left: 3rem;
@@ -558,10 +557,8 @@ iframe {
     #check2:checked ~ ul{
         top: -100%;
     }
-    /* --------------------HERO SECTION-------------------- */
     /* Remove the background image from the hero. */
     #hero {
-        
         background-color: var(--white);
     }
     /* Style the hero text div. */
@@ -575,12 +572,6 @@ iframe {
     h1.hero-heading {
         margin-top: 0;
     }
-    /* --------------------CATALOG SECTION-------------------- */
-    /* Reduce size of catalog items. */
-    #catalog .catalog-item {
-        min-width: 208px;
-    }
-    /* --------------------CONTACT SECTION-------------------- */
     /* Style the contact container. */
     #contact {
         display: flex;
@@ -591,7 +582,21 @@ iframe {
         padding:1rem 1rem;
         padding-right: 10px;
         width: 60%;
-        font-size: .8rem;
+    }
+    /* Resize Contact elements */
+    #contact p {
+        font-size: 1rem;
+    }
+    #contact strong {
+        font-size: 1.15rem;
+    }
+    #contact h4 {
+        font-size: 1.5rem;
+    }
+     /* Adjustment */
+     #info-section {
+        flex-direction: column;
+        align-items: center;
     }
     /* Change size of logo */
     #contact .logo {
@@ -599,8 +604,12 @@ iframe {
     }
     /* Reduce padding on the google maps embed. */
     .map {
-        margin-right: .5rem;
         padding: 30px .5rem;
+        width: 100%;
+    }
+    /* Adjustment */
+    #contact {
+        width: 100%;
     }
     /* Change size of google maps embed. */
     .iframe {
@@ -609,16 +618,24 @@ iframe {
 }
 
 /* SECOND MOBILE BREAKPOINT */
-@media (max-width:481px) {
-    /* --------------------CATALOG SECTION-------------------- */
+@media (max-width:490px) {
+   /* Adjust container */
+    .container-medium {
+        min-width: none;
+    }
+    /* Reduce logo size */
+    nav .logo {
+        font-size: 1.1rem;
+    }
+    /* Adjust container */
+    .hero-text {
+        padding: 0;
+        justify-content: last baseline;
+    }
     /* Style the catalog container. */
-    #catalog .catalog-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding-top: 20px;
+    #catalog .catalog-item {
+        min-width: 285px;
     } 
-    /* --------------------CONTACT SECTION-------------------- */
     /* Style the contact container. */
     #contact {
         display: flex;
@@ -631,6 +648,11 @@ iframe {
         width: 60%;
         font-size: .8rem;
     }
+    /* Adjustment */
+    #info-section {
+        flex-direction: column;
+        align-items: center;
+    }
     /* Change size of logo */
     #contact .logo {
         font-size: 1.2rem;
@@ -638,6 +660,11 @@ iframe {
     /* Reduce padding on the google maps embed. */
     .map {
         padding: 30px .5rem;
+        width: 100%;
+    }
+    /* Adjustment */
+    #contact {
+        width: 100%;
     }
     /* Change size of google maps embed. */
     .iframe {
