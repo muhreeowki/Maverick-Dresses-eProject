@@ -1,11 +1,11 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700&display=swap');
 
 /* --------------------BASE STYLES-------------------- */
 /* Declare some variables for things I will use frequently. */
 :root {
-    --font-primary: 'Chivo', sans-serif;
+    --font-primary: 'Catamaran', monospace;
     --font-secondary: 'Poppins', sans-serif;
     --blue: #22A39F;
     --dark-grey: #222222;
@@ -19,28 +19,51 @@
     text-decoration: none;
     box-sizing: border-box;
     list-style-type: none;
+    transition: .02s ease-in;
+}
+/* Create smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 /* Style main body of the webpage. */
 body {
     font-family: var(--font-primary);
     min-width: 480px;
-    background-color: var(--grey);
+    background-color: white ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+/* Style the container */
 .container-medium {
-    padding: 0 5%;
-    padding-top: 2rem;
+    width: 100%;
+    max-width: 1920px;
+    padding: 2rem 5%;
+    padding-bottom: 0;
 }
-
-
+/* Style the section tags */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
 
 /*--------------------NAVBAR-------------------- */
+/* Style the navbar container */
 nav {
     height: 4rem;
     width: 100%;
     position: fixed;
-    background-color: var(--grey);
+    background-color: var(--dark-grey);
     box-shadow: 0 5px 15px #2222220f;
+    display: flex;
+    justify-content: center;
+}
+/* Style nav container */
+nav .container-medium {
+    padding: 0;
 }
 /* Style the Mavericks Logo on the nav. */
 label.logo{
@@ -52,10 +75,11 @@ label.logo{
     line-height: 4rem;
     font-weight: 500;
     font-family: var(--font-secondary);
-
+    cursor: pointer;
 }
 /* Make the nav list stay on the right of the nav */
 nav ul{
+    max-width: 1920px;
     float: right;
     margin-right: 1rem;
 }
@@ -75,12 +99,12 @@ nav ul li a {
     padding: 7px 12px;
     border-radius: 7px;
     text-transform: uppercase;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
 }
 /* Dynamic styles for the links */
 nav ul li a:hover {
-    background-color: var(--dark-grey);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--dark-grey);
 }
 /* Style the exit icon for the nav bar */
 .xicon {
@@ -117,11 +141,12 @@ nav ul li a:hover {
     width: 100%;
     height: 100vh;
     background-color: var(--white);
-    background-image: url("../images/background.png");
+    background-image: url("../images/children.jpeg");
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
+    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.774);
 }
 /* HERO TEXT AND IMAGE */
 /* Hero container box. */
@@ -130,65 +155,63 @@ nav ul li a:hover {
     width: 100%;
     flex-direction: column;
     justify-items: space-between;
-    padding:0.5rem 2rem;
     height: auto;
 }
 /* Hero text div style */
 .hero-text {
     margin-top: 8rem;
-    margin-left: 5rem;
+    margin-left: 2rem;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 63%;
     height: 100vh;
-    float: left;
 }
 /* Style the heading of the hero */
 .heading {
-    font-size: 5.5vh;
+    font-size: 6vh;
     font-weight: 700;
     text-transform: uppercase;
     font-family: var(--font-secondary);
-    color: var(--dark-grey);
-    letter-spacing: 2px;
+    color: #f3efe0e0;
+    letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-top: 5rem;
 }
 /* Style the hero paragraph text */
 p.hero-desc {
-    color: var(--grey);
+    color: #f3efe0b3;
     text-align: justify;
-    font-size: 2.5vh;
+    font-size: 2vh;
 }
 /* Style the hero call to action button. */
 .cta {
     width: 200px;
     height: 50px;
     border: none;
-    color: var(--grey);
+    color: #f3efe0b3;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     font-family: var(--font-secondary);
     background-color: transparent;
-    border: 2px solid var(--grey);
+    border: 1px solid #f3efe080;
     padding: .8rem 2rem;
-    border-radius: 5px;
+    border-radius: 7px;
     margin-top: 4vh;
     cursor: pointer;
     box-shadow: 0px 0px 10px #2222221a;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
 }   
 /* Hover effect for call to action button */
 .cta:hover {
-    color: var(--white);
-    background-color: var(--grey);
+    color: var(--dark-grey);
+    background-color: var(--white);
+    box-shadow: none;
 }
-
 
 /* --------------------CATALOGUE SECTION -------------------- */
 /*Style the catalog section. */
 #catalog {
-    background-color: white;
+    background-color:rgb(254, 254, 254);
     color: var(--white);
     text-align: center;
     padding: 3rem 0;
@@ -216,8 +239,10 @@ h3.heading {
 #catalog .catalog-item {
     width: 23%;
     min-width: 250px;
+    max-height: 515px;
+    max-width: 300px;
     padding: 10px 12px;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 0px 20px #2222220f;
     margin: 20px 0;
@@ -227,7 +252,7 @@ h3.heading {
 /* Style the image for the catalog item */
 #catalog .catalog-item img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 /* Add a hover effect for the catalog item. */
 #catalog .catalog-item:hover {
@@ -242,14 +267,14 @@ h3.heading {
 /* Style the product type tag. */
 #catalog .item-description span {
    color: #43424290;
-   font-size: .9rem; 
+   font-size: 1rem; 
 }
 /* Style the Product name tage. */
 #catalog .item-description h5 {
     font-weight: 500;
     letter-spacing: 1px;
-    font-size: 1.1rem;
-    padding-top: 7px;
+    font-size: 1.2rem;
+    padding: 0;
 }
 /* Style the star ratings */
 #catalog .item-description i {
@@ -258,13 +283,108 @@ h3.heading {
     padding-top: 7px;
 }
 
-
-/* --------------------CONTACT SECTION -------------------- */
-/* Style the footer container. */
-footer {
+/*  --------------------SUGESTION SECTION --------------------*/
+/* Style about section */
+#about-section {
+    background-color: var(--white);
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+/* Style the about us container */
+#about-section .container-medium {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 100%;
+}
+/* Style the headings */
+#about-section .heading {
+    font-size: 2.5rem;
+}
+/* About us div */
+#about {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-right: 2rem;
+    text-align: justify;
+}
+/* Style the about us paragraph */
+.about-desc {
+   max-height: 340;
+}
+/* Style the about us text */
+.about-desc p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 22px;
+    line-height: 1.3rem;
+}
+/* Style the contact form div */
+#contact-form {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-left: 2rem;
+}
+/* Style the form */
+form {
+    width: 100%;
+    max-width: 950px;
+}
+/* Style the input areas */
+input, textarea {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: .3rem 1rem;
+    outline: 0;
+    border: 2px solid #22222244;
+    background-color: #22222286;
+    color: white;
+    font-size: .9rem;
+    font-family: var(--font-primary);
+    font-weight: 200;
+}
+input::placeholder, textarea::placeholder {
+    color: var(--white);
+}
+/* About section button */
+#about-section .cta {
+    margin-top: 0;
+    color: var(--dark-grey);
+    border: 1px solid var(--grey);
+}
+/* About section button hover effect */
+#about-section .cta:hover {
+    color: var(--white);
+    background-color: #22222286;
+}
+
+/* contact-form and about */
+#about, #contact-form {
+    justify-content: center;
+}
+/* --------------------CONTACT SECTION -------------------- */
+/* Style contact section */
+#contact-section {
+    background-color: var(--dark-grey);
+}
+/* Style the footer container. */
+#info-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
 }
 /* Style the contact container. */
 #contact {
@@ -274,6 +394,7 @@ footer {
     margin-bottom: 20px;
     justify-items: space-between;
     padding:1rem 4rem;
+    padding-left: 0;
     width: 45%;
 }
 /* Style the logo in the contact container. */
@@ -297,8 +418,13 @@ footer {
 }
 /* Style the name tags. */
 #contact strong {
+    font-size: 1.05rem;
     font-weight: 200;
     color: var(--white);
+}
+/* Style the contact details*/
+#contact span {
+    cursor: pointer;
 }
 /* Style the social media icons */
 #contact i {
@@ -306,6 +432,7 @@ footer {
     color: var(--white);
     font-size: 1.1rem;
     padding-right: .6rem;
+    transition: .2s ease-in-out;
 }
 /* Add hover effect to social media icons. */
 #contact i:hover {
@@ -315,19 +442,58 @@ footer {
 .map {
     width: 55%;
     padding:1rem 2rem;
+    max-width: 900px;
+    padding-right: 0;
     margin-bottom: 20px;
 }
 /* Style the google maps embed. */
 iframe {
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0px 0px 20px #2222225e;
 }
 
 
+
+
+
 /* ---------------------------------------*BREAKPOINTS*--------------------------------------- */
+/* BREAKPOINT FOR CONTACT SECTION*/
+/* larger displays */
+@media (max-width: 1205px) {
+    /* -------------------- CONTACT SECTION-------------------- */
+    #about-section {
+        height: max-content;
+    }
+    /* Adjust the alignment of the section container */
+    #about-section .container-medium {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    /* Adjust the width of the divs*/
+    #about, #contact-form {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 4rem;
+    }
+    /* Add boder */
+    #about {
+        padding: 4rem 0;
+        border-bottom: 20px solid var(--grey);
+    }
+    /* About text div */
+    .about-desc {
+        width: 85%;
+        max-width: 950px;
+    }
+    /* Adjust form */
+    form {
+        width: 85%;
+    }
+}
+
 /* TABLET BREAKPOINT */
 @media (max-width: 950px) {
-
     /* --------------------NAVBAR-------------------- */
     /* Change the size of the logo. */
     label.logo {
@@ -345,7 +511,6 @@ iframe {
         width: 50%;
     }
 }
-
 
 /* FIRST MOBILE BREAKPOINT */
 @media (max-width:768px) {
@@ -366,11 +531,11 @@ iframe {
         position: fixed;
         height: 100vh;
         width: 100%;
-        background-color: #181818;
+        background-color: var(--dark-grey);
         text-align: center;
         top: -100%;
         justify-content: center;
-        transition: all .3s ease-in-out; 
+        transition: all .2s ease-in-out; 
     }
     /* Make the nav list items display vertically. */
     nav ul li {
@@ -396,7 +561,7 @@ iframe {
     /* --------------------HERO SECTION-------------------- */
     /* Remove the background image from the hero. */
     #hero {
-        background-image: none;
+        
         background-color: var(--white);
     }
     /* Style the hero text div. */
@@ -410,13 +575,11 @@ iframe {
     h1.hero-heading {
         margin-top: 0;
     }
-
     /* --------------------CATALOG SECTION-------------------- */
     /* Reduce size of catalog items. */
     #catalog .catalog-item {
         min-width: 208px;
     }
-
     /* --------------------CONTACT SECTION-------------------- */
     /* Style the contact container. */
     #contact {
@@ -455,8 +618,6 @@ iframe {
         justify-content: space-evenly;
         padding-top: 20px;
     } 
-    
-
     /* --------------------CONTACT SECTION-------------------- */
     /* Style the contact container. */
     #contact {
