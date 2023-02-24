@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'catamaran';
+    src: url('../assets/fonts/Catamaran/webfontkit-20230223-043742/catamaran-medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/Catamaran/webfontkit-20230223-043742/catamaran-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'chivo';
+    src: url("../assets/fonts/Chivo/chivo-medium-webfont.woff2") format('woff2'),
+         url("../assets/fonts/Chivo/chivo-medium-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "noah";
+    src: url('../assets/fonts/Noah/Commercial/WEB/Noah-Regular.eot');
+    src: url('../assets/fonts/Noah/Commercial/WEB/Noah-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../assets/fonts/Noah/Commercial/WEB/Noah-Regular.woff2') format('woff2'), url('../assets/fonts/Noah/Commercial/WEB/Noah-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: "noah-logo";
+    src: url('../assets/fonts/Noah/Commercial/WEB/Noah-Bold.eot');
+    src: url('../assets/fonts/Noah/Commercial/WEB/Noah-Bold.eot') format('embedded-opentype'),
+    url('../assets/fonts/Noah/Commercial/WEB/Noah-Bold.woff2') format('woff2'), url('../assets/fonts/Noah/Commercial/WEB/Noah-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

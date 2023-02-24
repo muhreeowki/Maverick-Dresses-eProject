@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link main css stylesheet -->
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="assets/fontawesome webfonts/fontawesome.css" />
     <!-- Link fontawesome -->
     <script
       src="https://kit.fontawesome.com/c97c95f3e4.js"
@@ -22,28 +23,22 @@
   </head>
   <body>
     <!-- HERO SECTION -->
-    <a  name="top-jump"></a>
+    <a name="top-jump"></a>
     <section id="hero">
       <nav>
         <div class="container-medium">
           <!-- Logo -->
           <a href="index.html"><label class="logo">Maverick Dresses</label></a>
           <!-- Hamburger icon -->
-          <input type="radio" value="on" id="check" name="ham" />
-          <label for="check" class="checkbtn">
+          <div class="humburger">
             <i class="fa-solid fa-bars-staggered"></i>
-          </label>
+          </div>
           <!-- Link list -->
           <ul class="nav-list">
-            <div class="xicon">
-              <input type="radio" value="off" id="check2" name="ham" />
-              <label for="check2" class="checkbtn2">
-                <i class="fa-solid fa-xmark"></i>
-              </label>
-            </div>
-            <li class="nav-item home"><a href="#top-jump" class="active">Home</a></li>
+            <li class="nav-item">
+              <a href="#top-jump" class="active">Home</a>
+            </li>
             <li class="nav-item"><a href="#catalog-jump">Catalog</a></li>
-            <!-- <li class="nav-item"><a href="">About</a></li> -->
             <li class="nav-item"><a href="#contact-jump">Contact</a></li>
           </ul>
         </div>
@@ -53,13 +48,16 @@
       <!-- Hero text container. -->
       <div class="hero-box container-medium">
         <div class="hero-text">
-          <h1 class="heading">Providing Premium & Affordable School Uniforms</h1>
+          <h1 class="heading">
+            Providing Premium & Affordable School Uniforms
+          </h1>
           <!-- Subheading -->
           <p class="hero-desc">
-            Shop at Maverick Dresses. Check out our featured Items in the catalog.
+            Shop at Maverick Dresses. Check out our featured Items in the
+            catalog.
           </p>
           <!-- Call to action button. -->
-          <a href="#catalog"><button class="cta">VIEW CATALOG</button> </a>
+          <a href="#catalog"><button class="cta">VIEW CATALOG</button></a>
         </div>
       </div>
     </section>
@@ -244,28 +242,27 @@
           <!-- About container -->
           <div id="about">
             <h3 class="heading">About Us</h3>
-            <p class="subheading">
-              Get to know a little bit Maverick.
-            </p>
+            <p class="subheading">Get to know a little bit Maverick.</p>
             <div class="about-desc">
               <p>
                 Maverick Dresses is leading Uniform Manufacturers in the
                 country. They supply many schools in country and they give them
                 the best uniforms. They supply affordable school uniforms for
-                girls and boys. When clients come, they cater to client’s vision.
-                As a team of professionals they understand what clients want and
-                deliver the best results.
-                <br>
-                <br>
+                girls and boys. When clients come, they cater to client’s
+                vision. As a team of professionals they understand what clients
+                want and deliver the best results.
+                <br />
+                <br />
                 At Maverick Dresses, designs are innovative and there are always
-                fresh and new ideas for each and every client. The textiles are of
-                excellent quality and they make each uniform according to the size
-                requirements given. The fit is ingenious and they provide with the
-                best. Maverick Dresses is a part of a continuous strategic process
-                of creative inputs from experts in the field. They consider each
-                client differently and ensure the satisfaction with the end
-                results. Each client is given the uttermost importance. The entire
-                team works together to achieve the same goal.
+                fresh and new ideas for each and every client. The textiles are
+                of excellent quality and they make each uniform according to the
+                size requirements given. The fit is ingenious and they provide
+                with the best. Maverick Dresses is a part of a continuous
+                strategic process of creative inputs from experts in the field.
+                They consider each client differently and ensure the
+                satisfaction with the end results. Each client is given the
+                uttermost importance. The entire team works together to achieve
+                the same goal.
               </p>
               <button class="cta">Read More</button>
             </div>
@@ -277,7 +274,7 @@
               Leave us a suggestion and we will get back to you.
             </p>
             <form>
-              <input type="text" id="name" placeholder="Name" required s/>
+              <input type="text" id="name" placeholder="Name" required s />
               <input type="email" id="email" placeholder="Email" required />
               <input type="tel" id="tel" placeholder="Phone No." required />
               <textarea
@@ -333,4 +330,6 @@
       </footer>
     </section>
   </body>
+
+  <script src="main.js"></script>
 </html>

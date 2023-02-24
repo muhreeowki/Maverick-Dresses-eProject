@@ -1,12 +1,12 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700&display=swap');
+@import url("fonts.css");
 
 /* --------------------BASE STYLES-------------------- */
 /* Declare some variables for things I will use frequently. */
 :root {
-    --font-primary: 'Catamaran', monospace;
-    --font-secondary: 'Poppins', sans-serif;
+    --font-headings:'noah-logo', Helvetica, Arial, sans-serif;
+    --font-primary: 'noah';
+    --font-secondary: 'chivomedium';
     --blue: #22A39F;
     --dark-grey: #222222;
     --grey: #434242;
@@ -34,7 +34,6 @@ body {
     flex-direction: column;
     justify-content: center;
 }
-
 /* Style the container */
 .container-medium {
     width: 100%;
@@ -50,7 +49,6 @@ section {
     align-items: center;
     width: 100vw;
 }
-
 /*--------------------NAVBAR-------------------- */
 /* Style the navbar container */
 nav {
@@ -75,24 +73,24 @@ label.logo{
     font-size: 1.5rem;
     line-height: 4rem;
     font-weight: 500;
-    font-family: var(--font-secondary);
+    font-family: 'noah-logo';
     cursor: pointer;
 }
 /* Make the nav list stay on the right of the nav */
-nav ul{
+.nav-list{
     max-width: 1920px;
     float: right;
     margin-right: 1rem;
 }
 /* Makes the items horizontally inline */
 /* Add space between the nav items */
-nav ul li {
+.nav-list li {
     line-height: 4rem; 
     display: inline-block;
     margin: 0 7px; 
 }
 /* Style the individual links. */
-nav ul li a {
+.nav-list li a {
     color: var(--white);
     letter-spacing: 2px;
     font-size: 1rem;
@@ -103,17 +101,13 @@ nav ul li a {
     transition: .2s ease-in-out;
 }
 /* Dynamic styles for the links */
-nav ul li a:hover {
+.nav-list li a:hover {
     background-color: var(--white);
     color: var(--dark-grey);
 }
-/* Style the exit icon for the nav bar */
-.xicon {
-    width: 100%;
-    margin: 0;
-}
+
 /* Style the hamburger icon */
-.checkbtn, .checkbtn2{
+.humburger{
     font-size: 2rem;
     float: right;
     line-height: 4rem;
@@ -122,26 +116,12 @@ nav ul li a:hover {
     visibility: hidden;
     color: var(--white);
 }
-/* Style the exit icon. */
-.checkbtn2 {
-    margin-right: 0;
-    font-size: 2.5rem;
-    position: absolute;
-    left: 90%;
-    top: 0;
-    visibility: hidden;
-    color: var(--white);
-}
-#check, #check2{
-    display: none;
-}
-
 /* --------------------HERO SECTION-------------------- */
 /* Background image of the hero section. */
 #hero {
     width: 100%;
     height: 100vh;
-    background-color: var(--white);
+    background-color: var(--dark-grey);
     background-image: url("../images/children.jpeg");
     background-position: center center;
     background-size: cover;
@@ -167,17 +147,21 @@ nav ul li a:hover {
     width: 63%;
     height: 100vh;
 }
-/* Style the heading of the hero */
+/* Style the headings */
 .heading {
     font-size: 6vmin;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: var(--font-secondary);
+    font-family: var(--font-headings);
     color: #f3efe0e0;
     letter-spacing: 1px;
     margin-bottom: 1rem;
     margin-top: 5rem;
+}
+/* Customize hero heading */
+#hero .heading {
     max-width: 707px;
+    font-weight: 500;
 }
 /* Style the hero paragraph text */
 p.hero-desc {
@@ -185,6 +169,13 @@ p.hero-desc {
     text-align: justify;
     font-size: 2vh;
 }
+
+.hero-text a {
+    width: fit-content;
+    height: min-content;
+    margin-top: 4vh;
+}
+
 /* Style the hero call to action button. */
 .cta {
     width: 200px;
@@ -198,7 +189,6 @@ p.hero-desc {
     border: 1px solid #f3efe080;
     padding: .8rem 2rem;
     border-radius: 7px;
-    margin-top: 4vh;
     cursor: pointer;
     box-shadow: 0px 0px 10px #2222221a;
     transition: .2s ease-in-out;
@@ -209,7 +199,6 @@ p.hero-desc {
     background-color: var(--white);
     box-shadow: none;
 }
-
 /* --------------------CATALOGUE SECTION -------------------- */
 /*Style the catalog section. */
 #catalog {
@@ -247,7 +236,7 @@ h3.heading {
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 0px 20px #2222220f;
-    margin: 20px 5px;
+    margin: 20px 2px;
     transition: .3s ease-in-out;
     background-color:white;
 }
@@ -291,15 +280,14 @@ h3.heading {
     font-size: 13px;
     color: orange;
 }
-
+/* Style the item price */
 #catalog .item-description h4 {
     line-height: 1.2rem;
     font-size: 20px;
-    color: #22A39F;
-    font-family: var(--font-secondary);
+    color: #1a7a77;
+    font-family: var(--font-primary);
     padding-top: 3%;
 }
-
 /*  --------------------SUGESTION SECTION --------------------*/
 /* Style about section */
 #about-section {
@@ -335,7 +323,7 @@ h3.heading {
 }
 /* Style the about us text */
 .about-desc p{
-    font-size: 1.02rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-bottom: 22px;
     line-height: 1.3rem;
@@ -412,9 +400,13 @@ input::placeholder, textarea::placeholder {
     width: 45%;
 }
 /* Style the paragraph and anchor tags. */
-#contact p, #contact a{
+#contact p, #contact a {
     color: #cdcdcd;
     padding-bottom: 6px;
+}
+
+#contact p:hover, #contact a:hover{
+    color: white;
 }
 /* Style the heading in the contact container. */
 #contact h4 {
@@ -436,14 +428,14 @@ input::placeholder, textarea::placeholder {
 /* Style the social media icons */
 #contact i {
     cursor: pointer;
-    color: var(--white);
+    color: #ffffff8a;
     font-size: 1.1rem;
     padding-right: .6rem;
     transition: .2s ease-in-out;
 }
 /* Add hover effect to social media icons. */
 #contact i:hover {
-    color: var(--dark-grey);
+    color: var(--white);
 }
 /* Style the google maps embed. */
 .map {
@@ -460,13 +452,15 @@ iframe {
 }
 
 
-
-
-
 /* ---------------------------------------*BREAKPOINTS*--------------------------------------- */
 @media (max-width: 1400px) {
+    /* Adjust margins */
     .hero-text {
         margin-left: 4.5vmax;
+    }
+    /* adjust font sizes */
+    #catalog .catalog-item h4 {
+        font-size: 24px;
     }
 }
 
@@ -537,54 +531,44 @@ iframe {
 @media (max-width:768px) {
     /* --------------------NAVBAR-------------------- */
     /* Show the hamburger Icon. */
-    .checkbtn, .checkbtn2{
+    .humburger {
         visibility: visible;
         margin-right: 2rem;
     }
-    /* Change the size of the nav item container */
-    .nav-item {
-        height: 16vh;
-    }
     /* Change the layout of the nav list*/
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        height: 100vh;
+    .nav-list {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        left: 0;
+        height: 0px;
         width: 100vw;
         background-color: var(--dark-grey);
         text-align: center;
-        top: -100%;
-        justify-content: center;
-        transition: all .2s ease-in-out; 
-        visibility: hidden;
+        transition: .3s; 
+        padding: 0;
+        overflow: hidden;
     }
     /* Make the nav list items display vertically. */
-    nav ul li {
+    .nav-list li {
         display: block;
-    }
-    /* Bring the top of the list lower. */
-    nav ul li.home {
-        margin-top: 0;
+        margin:0 0 20px 0;
+        opacity: 0;
+        transition: .3s ease-in-out;
     }
     /* Change nav link color */
-    nav ul li a{
-        font-size: 3vh;
+    .nav-list li a{
+        font-size: 19px;
         color: var(--white);
     }
-    /* Make the nav list move down when hamburger is clicked. */
-    #check:checked ~ ul{
-        visibility: visible;
-        top: 0;
+    /* Active navbar style */
+    .nav-list.active {
+        height: 310px;
+        padding-top: 30px;
     }
-    /* Move nav list up when the X icon is clicked. */
-    #check2:checked ~ ul{
-        top: -100%;
-        visibility: hidden;
-    }
-    /* Remove the background image from the hero. */
-    #hero {
-        background-color: var(--white);
+    /* Active nav bar style */
+    .nav-list.active li {
+        opacity: 1;
     }
     /* Style the hero text div. */
     .hero-text {
@@ -612,9 +596,11 @@ iframe {
     #contact p {
         font-size: 1rem;
     }
+    /* Adjust font size */
     #contact strong {
         font-size: 1.15rem;
     }
+    /* Adjust font size */
     #contact h4 {
         font-size: 1.5rem;
     }
@@ -657,10 +643,10 @@ iframe {
         padding: 0;
         justify-content: last baseline;
     }
+    /* Adjust hero heading width. */
     .hero-text .heading {
         width: 50%;
     }
-
     /* Style the catalog container. */
     #catalog .catalog-item {
         min-width: 285px;
