@@ -280,7 +280,7 @@ h3.heading {
     font-size: 13px;
     color: orange;
 }
-/* Style the item price */
+/* Style the item price and the visitors count number.*/
 #catalog .item-description h4 {
     line-height: 1.2rem;
     font-size: 20px;
@@ -322,11 +322,23 @@ h3.heading {
     text-align: justify;
 }
 /* Style the about us text */
-.about-desc p{
+.about-desc p {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 22px;
     line-height: 1.3rem;
+}
+/* Style visitors count text */
+.about-desc span {
+    color: #3f3f3f9f;
+}
+/* Style the visitors count */
+#visitors {
+    line-height: 1.2rem;
+    font-size: 20px;
+    color: #262626;
+    font-family: var(--font-primary);
+    padding-top: 3%; 
 }
 /* Style the contact form div */
 #contact-form {
