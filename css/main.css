@@ -105,7 +105,6 @@ label.logo{
     background-color: var(--white);
     color: var(--dark-grey);
 }
-
 /* Style the hamburger icon */
 .humburger{
     font-size: 2rem;
@@ -140,7 +139,7 @@ label.logo{
 }
 /* Hero text div style */
 .hero-text {
-    margin-top: 8rem;
+    margin-top: 7.3rem;
     margin-left: 2rem;
     display: flex;
     flex-direction: column;
@@ -175,7 +174,6 @@ p.hero-desc {
     height: min-content;
     margin-top: 4vh;
 }
-
 /* Style the hero call to action button. */
 .cta {
     width: 200px;
@@ -438,7 +436,7 @@ input::placeholder, textarea::placeholder {
     cursor: pointer;
 }
 /* Style the social media icons */
-#contact i {
+#contact .icon a{
     cursor: pointer;
     color: #ffffff8a;
     font-size: 1.1rem;
@@ -446,7 +444,7 @@ input::placeholder, textarea::placeholder {
     transition: .2s ease-in-out;
 }
 /* Add hover effect to social media icons. */
-#contact i:hover {
+#contact .icon a:hover {
     color: var(--white);
 }
 /* Style the google maps embed. */
